@@ -20,7 +20,7 @@
         <div class="offcanvas-body">
           <div class="card">
             <div class="card-body">
-              <form action="" class="add-account-from">
+              <form action="/account/create_account" method="post" class="add-account-from">
                 <div class="form-group mb-3">
                   <label for="">Enter Account Name</label>
                   <input type="text" name="account_name" class="form-control" placeholder="Enter Account name...">
@@ -28,7 +28,7 @@
 
                 <div class="form-group mb-3">
                   <label for="">Select Account Type</label><br>
-                  <select name="account-type" class="form-control" id="">
+                  <select name="account_type" class="form-control" id="">
                     <option value="">-- Select Account Type --</option>
                     <option value="check">-- Check --</option>
                     <option value="saving">-- Savings --</option>

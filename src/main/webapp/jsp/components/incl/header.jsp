@@ -18,9 +18,9 @@
             </div>
 
             <nav class="navigation">
-                <li><a href="">Dashboard</a></li>
-                <li><a href="">Payment History</a></li>
-                <li><a href="">Transaction History</a></li>
+                <li><a href="/app/dashboard">Dashboard</a></li>
+                <li><a href="/app/paymentHistory">Payment History</a></li>
+                <li><a href="/app/transactionHistory">Transaction History</a></li>
             </nav>
 
             <div class="display-name ms-auto text-white">

@@ -14,16 +14,21 @@
 <div class="card withdraw-card">
             <div class="card-body">
 
-          <form action="" class="deposite-form">
+          <form action="/transact/withdraw" method="post" class="deposite-form">
             <div class="form-group mb-2">
               <label for="">Enter withdraw Amount</label>
-              <input type="text" name="withdrawal" id="" class="form-control" placeholder="Enter withdrawal amount">
+              <input type="text" name="withdrawal_amount" id="" class="form-control" placeholder="Enter withdrawal amount">
             </div>
 
             <div class="form-group">
               <label for="">Select Account</label>
-              <select name="account-id" class="form-control" id="">
+              <select name="account_id" class="form-control" id="">
                 <option value="">-- Select Account --</option>
+                <c:if test="${userAccounts != null}">
+            	<c:forEach items="${userAccounts}" var="selectAccount">
+            		<option value="${selectAccount.account_id }">${selectAccount.account_name}</option>
+            	</c:forEach>
+            </c:if>
               </select>
             </div>
 

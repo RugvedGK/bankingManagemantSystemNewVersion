@@ -13,19 +13,33 @@
 <body>
 <div class="card transfer-card">
             <div class="card-body">
-              <div class="form-group">
-                <label for="">Select Account</label>
-                <select name="account-id" class="form-control" id="">
-                  <option value="">-- Select Account --</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="">Select Account</label>
-                <select name="account-id" class="form-control" id="">
-                  <option value="">-- Select Account --</option>
-                </select>
-              </div>
+            	<form action="/transact/transfer" method="post">
+            	
+            <div class="form-group">
+              <label for="">Select Account</label>
+              <select name="transfer_from" class="form-control" id="">
+                <option value="">-- Select Account --</option>
+                <c:if test="${userAccounts != null}">
+            	<c:forEach items="${userAccounts}" var="selectAccount">
+            		<option value="${selectAccount.account_id }">${selectAccount.account_name}</option>
+            	</c:forEach>
+            </c:if>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="">Select Account</label>
+              <select name="transfer_to" class="form-control" id="">
+                <option value="">-- Select Account --</option>
+                <c:if test="${userAccounts != null}">
+            	<c:forEach items="${userAccounts}" var="selectAccount">
+            		<option value="${selectAccount.account_id }">${selectAccount.account_name}</option>
+            	</c:forEach>
+            </c:if>
+              </select>
+            </div>
+              
+              
               
               <div class="form-group mb-2">
                 <label for="">Enter transfer Amount</label>
@@ -35,6 +49,8 @@
               <div class="form-group mb-2">
                 <button id="transact-btn" class="btn btn-md transact-btn">Transfer</button>
               </div>
+              
+            	</form>
             </div>
           </div>
 </body>
